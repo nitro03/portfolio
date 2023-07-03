@@ -1,0 +1,17 @@
+{
+  "home": "Strona główna",
+  "career": "Kariera",
+  "projects": "Projekty",
+  "free_time": "W wolnym czasie",
+  "contact": "Kontakt",
+  "copyrights": "Wszelkie prawa zastrzeżone © - Krzysztof Bartosik 2023",
+  "hello": "Cześć!",
+  "hello_msg": "Mam na imię Krzysztof i chciałbym Ci zaprezentować moją prywatną stronę! Jestem web developerem z ponad 10 letnim doświadczeniem. Znajdziesz tutaj kilka słów o mnie, mojej karierze, dodatkowych projektach, a także parę innych rzeczy ;) ",
+  "developer": "Programista",
+  "developer_desc": "Zaczynałem jako web developer w JS przy tworzeniu interfejsu webowego opartego na technologi GWT w aplikacji klasy Telco OSS. Kolejnym etapem był rozwój serwisów w Javie oraz warstwy frontendowej w JS produktu do wizualizacji szaf w serwerowniach. Następnie trafiłem do zespołu budującego interfejs do systemu OSS w React.",
+  "team_leader": "Szef zespołu",
+  "team_leader_desc": "Jako szef zespołu budującego framework webowy wspomniany niżej, moim zadaniem było kierowanie około 8 osobowym zespołem oraz aktywny development. Uczestniczyłem w technicznych częściach rekrutacji pracowników, prowadziłem analizy techniczne, projektowałem architekturę webowego klienta do systemu Comarch OSS Console. Wyzwaniem było tworzenie komponentów wspólnych, spełniających różnorodne wymagania biznesowe.",
+  "team_leader_desc_new": "Po restrukturyzacji w Comarch, wróciłem do prowadzenia zespołu z bagażem doświadczeń jako dyrektor działu i świeżym spojrzeniem. Zadaniem jest prowadzenie zespołu, który w wydajny sposób produkuje interfejs do core'owych funkcji systemu Comarch OSS Console z najwyższą jakością.",
+  "director": "Dyrektor działu Web R&D",
+  "director_desc": "W dziale którego byłem dyrektorem pracowało około 30 osób, podzielonych na 4 zespoły. Zespoły zajmowały się zarówno front-endem jak i back-endem dotyczącym najbardziej core'owyc funkcji systemu Comarch OSS Console. W międzyczasie ukończyłem szkolenia Comarch Akademia Zarządzania oraz Akademia Lidera. Moje obowiązki obejmowały nadzór nad realizacją roadmpay zespołów, prowadzenie rekrutacji, rozwój oraz mentoring pracowników, a także prowadzenie spraw kadrowych. Oprócz tego definiowanie i realizacja strategii w dziale oraz analiza ryzyk w trakcie produkcji."
+}
