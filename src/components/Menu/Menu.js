@@ -11,10 +11,6 @@ Menu.propTypes = {};
 function Menu() {
     const activeKey = window?.location?.pathname;
     const {lang, setLang} = useContext(LangContext);
-    console.log(lang);
-    const changeLang = (lang) => {
-        setLang(lang);
-    }
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary justify-content-center" data-bs-theme="dark">
@@ -31,9 +27,9 @@ function Menu() {
                 </Navbar.Collapse>
                 <div className="justify-content-end ">
                     <ul className="lang-change text-white-50">
-                        <li className={classNames("btn", {active: lang === "en"})} onClick={()=>{changeLang("en")}}>EN</li>
+                        <li className={classNames("btn", {active: lang === "en"})} onClick={()=>{setLang("en")}}>EN</li>
                         <li>|</li>
-                        <li className={classNames("btn",{active: lang === "pl"})} onClick={()=>{changeLang("pl")}}>PL</li>
+                        <li className={classNames("btn",{active: lang === "pl"})} onClick={()=>{setLang("pl")}}>PL</li>
                     </ul>
                 </div>
             </Container>

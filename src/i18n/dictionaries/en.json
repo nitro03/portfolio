@@ -12,5 +12,13 @@
   "team_leader": "Team leader",
   "team_leader_desc": "Team leader",
   "director": "Web R&D Director",
-  "director_desc": "Web R&D Director"
+  "director_desc": "Web R&D Director",
+  "snow_plow_project_label": "snowPlowProjectLabel",
+  "room_planner_project_label": "roomPlannerProjectLabel",
+  "android_todo_project_label": "androidTodoProjectLabel",
+  "comarch_oss_project_label": "comarch_oss_project_label",
+  "comarch_oss_project_title": "Comarch OSS Console",
+  "snow_plow_project_title": "Snow Plow Helper",
+  "room_planner_project_title": "Room Planner",
+  "android_todo_project_title":  "Voice Todo"
 }
