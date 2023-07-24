@@ -20,5 +20,15 @@
   "comarch_oss_project_title": "Comarch OSS Console",
   "snow_plow_project_title": "Snow Plow Helper",
   "room_planner_project_title": "Room Planner",
-  "android_todo_project_title":  "Voice Todo"
+  "android_todo_project_title":  "Voice Todo",
+  "gaming_title": "Gaming",
+  "gaming_desc": "",
+  "sport_title": "Sports",
+  "sport_desc": "",
+  "horus_title": "Horus (Bengal cat)",
+  "horus_desc": "",
+  "modelling_title": "Plastic Modelling",
+  "modelling_desc": "",
+  "dyi_title": "DYIs",
+  "dyi_desc": ""
 }
