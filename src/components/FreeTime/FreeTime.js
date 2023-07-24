@@ -11,11 +11,13 @@ function FreeTime() {
     const {lang} = useContext(LangContext);
     const renderFreeTimePanels = () => {
         if (Array.isArray(hobbiesData)) {
-            const panelsList = hobbiesData.map((hobby) => {
-                const {imgSrc, descriptionLabel, title} = hobby;
-                return <Panel imgSrc={imgSrc}
+            const panelsList = hobbiesData.map((hobby, index) => {
+                const {imgSrc, descriptionLabel, title, link} = hobby;
+                return <Panel key={`hobby-panel-${index}`}
+                                imgSrc={imgSrc}
                               title={translator(title, lang)}
-                              description={translator(descriptionLabel, lang)}/>
+                              description={translator(descriptionLabel, lang)}
+                              link={link}/>
             });
             return panelsList;
         }

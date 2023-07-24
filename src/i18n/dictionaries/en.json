@@ -30,5 +30,11 @@
   "modelling_title": "Plastic Modelling",
   "modelling_desc": "",
   "dyi_title": "DYIs",
-  "dyi_desc": ""
+  "dyi_desc": "",
+  "contact_info": "Have You found something interesting on my website? You wanna contact me? Feel free - use the conteact form below!",
+  "email_label": "Your E-mail",
+  "name_label": "Your Name",
+  "message_label": "Message",
+  "submit_btn_label": "Send",
+  "contact_confirmation": "Thanks for sending me a message! I'm gonna answer as soon as possible!"
 }

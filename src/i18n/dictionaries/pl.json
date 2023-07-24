@@ -31,5 +31,11 @@
   "modelling_title": "Modelarstwo",
   "modelling_desc": "Początkiem 2023 roku wróciłem do tego hobby sprzed lat. Jako dziecko sklejałem modele, jednak dopiero po reaktywacji tego zajęcia zobaczyłem jakie dzieła sztuki są w stanie zrobić najlepsi modelarze. Mnie do nich jeszcze wiele brakuje, ale mój pierwszy model F-14 Tomcat który jest obok, uważam, że wyszedł nienajgorzej. Kolejne projekty już są na horyzoncie!",
   "dyi_title": "Majsterkowanie",
-  "dyi_desc": "Elektronarzędzia, zapach szlifowanego i wierconego drewna, to jest to! Raz za jakiś czas zdarzy mi się troszkę pomajsterkować. Zmysł inżyniera na pewno pomaga w realizacji różnych projektów, na zdjęciu skrzynio-leżanka na balkon. Bardzo lubię budować, jako dziecko z klocków Lego, jako programista z klocków w React'cie, a w razie potrzeby z drewna lub karton-gipsu :) Zawsze nagroda jest taka sama - efekty pracy i satysfakcja, że własnymi rękoma można zrobić coś z niczego."
+  "dyi_desc": "Elektronarzędzia, zapach szlifowanego i wierconego drewna, to jest to! Raz za jakiś czas zdarzy mi się troszkę pomajsterkować. Zmysł inżyniera na pewno pomaga w realizacji różnych projektów, na zdjęciu skrzynio-leżanka na balkon. Bardzo lubię budować, jako dziecko z klocków Lego, jako programista z klocków w React'cie, a w razie potrzeby z drewna lub karton-gipsu :) Zawsze nagroda jest taka sama - efekty pracy i satysfakcja, że własnymi rękoma można zrobić coś z niczego.",
+  "contact_info": "Znalazłeś(aś) coś interesującego na mojej stronie? Chcesz się skontaktować? Śmiało, skorzystaj z forumlarza poniżej!",
+  "email_label": "Twój e-mail",
+  "name_label": "Twoje imię",
+  "message_label": "Wiadomość",
+  "submit_btn_label": "Wyślij",
+  "contact_confirmation": "Dziękuję za wysłanie wiadomości! Odpowiem najszybciej jak będę mógł!"
 }
