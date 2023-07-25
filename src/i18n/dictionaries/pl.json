@@ -37,5 +37,7 @@
   "name_label": "Twoje imię",
   "message_label": "Wiadomość",
   "submit_btn_label": "Wyślij",
-  "contact_confirmation": "Dziękuję za wysłanie wiadomości! Odpowiem najszybciej jak będę mógł!"
+  "message_sent": "Wysłano wiadomość!",
+  "contact_confirmation": "Dziękuję za wysłanie wiadomości! Odpowiem najszybciej jak będę mógł!",
+  "close": "Zamknij"
 }
