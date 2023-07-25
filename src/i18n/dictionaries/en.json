@@ -37,6 +37,8 @@
   "message_label": "Message",
   "submit_btn_label": "Send",
   "message_sent": "Message has been sent!",
+  "message_not_sent": "Oops, something went wrong",
   "contact_confirmation": "Thanks for sending me a message! I'm gonna answer as soon as possible!",
+  "contact_error_msg": "Unfortunately message has not been sent. Try again later :(",
   "close": "Close"
 }

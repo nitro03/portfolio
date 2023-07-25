@@ -1,8 +1,9 @@
 import React, {useContext, useState} from 'react';
 import {Button, Col, Container, Form, Row, Modal} from 'react-bootstrap';
+import EmailIcon from '@mui/icons-material/Email';
 import translator from '../../i18n/translator';
 import {LangContext} from '../../contexts/LangContext';
-import EmailIcon from '@mui/icons-material/Email';
+import call from './call';
 
 import './contact.scss';
 
@@ -22,11 +23,39 @@ function Contact() {
     const [formState, setFormState] = useState(INITIAL_STATE);
     const [validated, setValidated] = useState(false);
     const [isModalShown, showModal] = useState(false);
+    const [hasRequestPassed, setRequestPassed] = useState(false);
     const toggleModal = () => showModal(!isModalShown);
+    const openConfirmation = () => {
+        setRequestPassed(true);
+        toggleModal();
+    }
+    const openErrorInfo = () => {
+        setRequestPassed(false);
+        toggleModal();
+    }
 
     const clearInputs = () => {
         setFormState(INITIAL_STATE);
         setValidated(false);
+    }
+
+    const sendMsg = (message) => {
+        const url = '/rest/send-mail'
+        const options = {
+            url,
+            method: 'POST',
+            body: {
+                ...message
+            }
+        }
+        call(options, onSuccess, onFail);
+    }
+    const onSuccess = () => {
+        openConfirmation();
+        clearInputs();
+    }
+    const onFail = () => {
+        openErrorInfo();
     }
     const onSubmit = (e) => {
         e.preventDefault();
@@ -46,10 +75,7 @@ function Contact() {
             msg,
             date: currentDate
         }
-        //tu powinna byc akcja wyslania wiadomosci na maila
-        console.log(message);
-        toggleModal();
-        clearInputs();
+        sendMsg(message)
     }
     const renderInfo = () => {
         return (
@@ -60,16 +86,19 @@ function Contact() {
     };
 
     const renderModal = () => {
+        const variant = hasRequestPassed ? 'primary' : 'danger';
+        const title = hasRequestPassed ? 'message_sent' : 'message_not_sent';
+        const msg = hasRequestPassed ? 'contact_confirmation' : 'contact_error_msg';
 
         return (
             <Modal show={isModalShown} onHide={toggleModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>{translator('message_sent', lang)}</Modal.Title>
+                    <Modal.Title>{translator(title, lang)}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>{translator('contact_confirmation', lang)}</Modal.Body>
+                <Modal.Body>{translator(msg, lang)}</Modal.Body>
                 <Modal.Footer>
 
-                    <Button variant="primary" onClick={toggleModal}>
+                    <Button variant={variant} onClick={toggleModal}>
                         {translator('close', lang)}
                     </Button>
                 </Modal.Footer>

@@ -38,6 +38,8 @@
   "message_label": "Wiadomość",
   "submit_btn_label": "Wyślij",
   "message_sent": "Wysłano wiadomość!",
+  "message_not_sent": "Ups, coś poszło nie tak",
   "contact_confirmation": "Dziękuję za wysłanie wiadomości! Odpowiem najszybciej jak będę mógł!",
+  "contact_error_msg": "Niestety wysłanie wiadomości nie powiodło się, spróbuj ponownie później :(",
   "close": "Zamknij"
 }
