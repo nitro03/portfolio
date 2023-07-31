@@ -13,9 +13,9 @@ function Contact() {
     const INPUT_NAME_ID = 'formControlName';
     const INPUT_MSG_ID = 'formControlMsg';
     const INITIAL_STATE = {
-        senderMail: '',
-        senderName: '',
-        msg: ''
+        senderMail: 'kb@test.pl',
+        senderName: 'KB',
+        msg: 'Test'
     };
 
     const {lang} = useContext(LangContext);
@@ -75,6 +75,7 @@ function Contact() {
             msg,
             date: currentDate
         }
+        //TODO: loader
         sendMsg(message)
     }
     const renderInfo = () => {
