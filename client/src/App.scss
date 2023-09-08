@@ -1,6 +1,8 @@
 @import 'utils/constants';
 html {
   height: 100%;
+  font-family: Roboto;
+  font-size: 18px;
 }
 
 body {
@@ -9,7 +11,7 @@ body {
 
 main {
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #root {
@@ -19,7 +21,7 @@ main {
 }
 
 .content-container {
-  height: calc(100% - 50px);
+  height: calc(100% - $footerHeight);
   width: 80vw;
 }
 .content-container.mobile{

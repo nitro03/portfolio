@@ -1,5 +1,10 @@
-$menu-bg-color: #282c34;
+@import '../../utils/colors.scss';
+
+$menu-bg-color: #111418;
+$active-element-color: #20c997;
 $avatarSize: 200px;
+
+$menu-font-color: rgba(255, 255, 255, 0.8);
 
 .menu-container {
   display: flex;
@@ -22,21 +27,68 @@ $avatarSize: 200px;
   height: 100%;
 }
 
+.menu-buttons {
+  padding-top: 10vh;
+}
+
+.menu-item {
+  height: 50px;
+  padding: 5px 0;
+
+}
+
+.menu-item a {
+  width: 100%;
+  height: 100%;
+  color: $menu-font-color;
+  text-decoration: none;
+}
+
+.menu-item.active a {
+  color: $active-element-color;
+}
+
+.menu-item a:hover {
+  transition: color ease-in;
+  color: $active-element-color;
+}
+
 .lang-change {
-  align-self: flex-end;
-  top: 0;
   margin-top: 15px;
-  right:0;
   margin-right: 15px;
   list-style-type: none;
   display: flex;
   flex-direction: row;
 }
-.lang-change li{
+
+.lang-change li.btn {
   padding: 0 10px;
+  color: $icon-inactive-color;
+  &:hover{
+    color: $icon-active-color;
+  }
+  &.active{
+    color: $icon-active-color;
+  }
+}
+
+.avatar-container {
+  height: 40vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.avatar-shadow {
+  padding: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .avatar-pic {
-  width: $avatarSize;
-  height: $avatarSize;
+  width: 15vw;
+  height: 15vw;
+  max-width: $avatarSize;
+  max-height: $avatarSize;
 }

@@ -1,39 +1,45 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import translator from '../../i18n/translator';
 
 import "./menu.scss";
-import {Container, Image, Nav, Navbar} from 'react-bootstrap';
+import {Image} from 'react-bootstrap';
 import {LangContext} from '../../contexts/LangContext';
-import {Link} from 'react-router-dom';
 import myPic from './img/kb.jpg';
+import MenuItem from './MenuItem';
 
 Menu.propTypes = {};
 
 function Menu() {
-    const activeKey = window?.location?.pathname;
     const {lang, setLang} = useContext(LangContext);
+    const [activeKey, setActiveKey] = useState(window?.location?.pathname)
 
 
     const renderAvatar = () => {
-        return (<div>
-            <Image className='avatar-pic' src={myPic} roundedCircle/>
+        return (<div className="avatar-container">
+            <div className="avatar-shadow">
+                <Image className='avatar-pic' src={myPic} roundedCircle/>
+            </div>
         </div>);
     };
     const renderMenuItems = () => {
-        return (<div>
-                <Nav.Link><Link to='/'>{translator("home", lang)}</Link></Nav.Link>
-                <Nav.Link><Link to='/career'>{translator("Career", lang)}</Link></Nav.Link>
-                <Nav.Link><Link to='/projects'>{translator("Projects", lang)}</Link></Nav.Link>
-                <Nav.Link><Link to='/freetime'>{translator("Free_Time", lang)}</Link></Nav.Link>
-                <Nav.Link><Link to='/contact'>{translator("Contact", lang)}</Link></Nav.Link>
+        return (<div className='menu-buttons'>
+                <MenuItem url='/' label={translator("home", lang)} activeKey={activeKey} setActiveKey={setActiveKey}/>
+                <MenuItem url='/career' label={translator("Career", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey}/>
+                <MenuItem url='/projects' label={translator("Projects", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey}/>
+                <MenuItem url='/freetime' label={translator("Free_Time", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey}/>
+                <MenuItem url='/contact' label={translator("Contact", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey}/>
             </div>
         );
     }
 
     const renderLangChanger = () => {
-        return (<div className="justify-content-end ">
-            <ul className="lang-change text-white-50">
+        return (<div className="justify-content-start">
+            <ul className="lang-change">
                 <li className={classNames("btn", {active: lang === "en"})} onClick={() => {
                     setLang("en")
                 }}>EN
@@ -49,9 +55,10 @@ function Menu() {
 
     return (
         <nav className="menu-sideMenu">
+            {renderLangChanger()}
             {renderAvatar()}
             {renderMenuItems()}
-            {renderLangChanger()}
+
         </nav>
     );
 }
