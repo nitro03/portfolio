@@ -12,11 +12,11 @@ import classNames from 'classnames';
 const WIDTH_LG_BREAKPOINT = 991;
 
 function App() {
-    const [isMobile, setIsMobile] = useState(false);
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight,
     ]);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= WIDTH_LG_BREAKPOINT);
 
     useEffect(() => {
         document.title = 'Nitrax entertainment';
@@ -48,8 +48,8 @@ function App() {
                 <div className={classes}>
                     <Menu isMobile={isMobile}/>
                     <div className={contentClasses}>
-                        <Content/>
-                        <Footer/>
+                        <Content isMobile={isMobile}/>
+                        <Footer isMobile={isMobile}/>
                     </div>
                 </div>
             </Router>

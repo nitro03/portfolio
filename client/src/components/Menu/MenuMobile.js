@@ -1,40 +1,62 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import classNames from 'classnames';
-import translator from '../../i18n/translator';
 
-import "./menu.scss";
-import {Container, Nav, Navbar} from 'react-bootstrap';
 import {LangContext} from '../../contexts/LangContext';
-import {Link} from 'react-router-dom';
+import translator from '../../i18n/translator';
+import MenuHamburger from './MenuHamburger';
+import MenuItem from './MenuItem';
+
+import "./css/menu.scss";
 
 MenuMobile.propTypes = {};
 
 function MenuMobile() {
-    const activeKey = window?.location?.pathname;
     const {lang, setLang} = useContext(LangContext);
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [activeKey, setActiveKey] = useState(window?.location?.pathname)
+
+    const renderButton = () => {
+        return (
+            <MenuHamburger isExpanded={isExpanded} callback={setIsExpanded}/>
+        );
+    };
+    const renderMenuItems = () => {
+        const classes = classNames("menu-buttons mobile", {'closed': !isExpanded})
+        const onClick = () => {
+            setIsExpanded(false);
+        }
+        return (<div className={classes}>
+                <MenuItem url='/' label={translator("home", lang)} activeKey={activeKey} setActiveKey={setActiveKey} onClick={onClick}/>
+                <MenuItem url='/career' label={translator("Career", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey} onClick={onClick}/>
+                <MenuItem url='/projects' label={translator("Projects", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey} onClick={onClick}/>
+                <MenuItem url='/freetime' label={translator("Free_Time", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey} onClick={onClick}/>
+                <MenuItem url='/contact' label={translator("Contact", lang)} activeKey={activeKey}
+                          setActiveKey={setActiveKey} onClick={onClick}/>
+            </div>
+        );
+    }
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary justify-content-center" data-bs-theme="dark">
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" activeKey={activeKey}>
-                        <Nav.Link><Link to='/'>{translator( "home", lang)}</Link></Nav.Link>
-                        <Nav.Link><Link to='/career'>{translator( "Career", lang)}</Link></Nav.Link>
-                        <Nav.Link><Link to='/projects'>{translator( "Projects", lang)}</Link></Nav.Link>
-                        <Nav.Link><Link to='/freetime'>{translator( "Free_Time", lang)}</Link></Nav.Link>
-                        <Nav.Link><Link to='/contact'>{translator( "Contact", lang)}</Link></Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-                <div className="justify-content-end ">
-                    <ul className="lang-change text-white-50">
-                        <li className={classNames("btn", {active: lang === "en"})} onClick={()=>{setLang("en")}}>EN</li>
-                        <li>|</li>
-                        <li className={classNames("btn",{active: lang === "pl"})} onClick={()=>{setLang("pl")}}>PL</li>
-                    </ul>
-                </div>
-            </Container>
-        </Navbar>
+        <nav data-bs-theme="dark">
+            <div className="navigation-buttons-container">
+                {renderButton()}
+                <ul className="lang-change">
+                    <li className={classNames("btn", {active: lang === "en"})} onClick={() => {
+                        setLang("en")
+                    }}>EN
+                    </li>
+                    <li className={classNames("btn", {active: lang === "pl"})} onClick={() => {
+                        setLang("pl")
+                    }}>PL
+                    </li>
+                </ul>
+            </div>
+            {renderMenuItems()}
+
+        </nav>
     );
 }
 

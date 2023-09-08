@@ -9,6 +9,12 @@ footer {
   display: flex;
   justify-content: center;
 }
+footer {
+  &.mobile {
+    position: sticky;
+    bottom: 0px;
+  }
+}
 
 footer > span {
   align-self: center;

@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import "./menu.scss";
+import "./css/menu.scss";
 import MenuMobile from './MenuMobile';
 import SideMenu from './SideMenu';
 

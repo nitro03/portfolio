@@ -4,13 +4,20 @@ import translator from '../../i18n/translator';
 
 import './footer.scss';
 import {LangContext} from '../../contexts/LangContext';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-Footer.propTypes = {};
+Footer.propTypes = {
+    isMobile: PropTypes.bool
+};
 
-function Footer() {
+function Footer({isMobile}) {
     const {lang} = useContext(LangContext);
+    const classes = classNames("bg-dark", {
+        'mobile': isMobile
+    })
     return (
-        <footer key="footer-key" className="bg-dark">
+        <footer key="footer-key" className={classes}>
             <span className="text-center text-white-50">{translator("copyrights", lang)}</span>
         </footer>
     );

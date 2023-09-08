@@ -8,11 +8,20 @@ import Projects from '../Projects/Projects';
 import FreeTime from '../FreeTime/FreeTime';
 import Contact from '../Contact/Contact';
 import {Col, Container, Row} from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-function Content(props) {
+Content.propTypes = {
+    isMobile: PropTypes.bool
+}
 
+function Content({isMobile}) {
+
+    const classes = classNames("content content bg-dark bg-opacity-75 py-5 px-5", {
+        'mobile': isMobile
+    })
     return (
-        <main className="content bg-dark bg-opacity-75 py-5 px-5">
+        <main className={classes}>
             <Container fluid className={"p-0"}>
                 <Row>
                     <Col lg={12}>

@@ -2,7 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
 import translator from '../../i18n/translator';
 
-import "./menu.scss";
+import "./css/menu.scss";
 import {Image} from 'react-bootstrap';
 import {LangContext} from '../../contexts/LangContext';
 import myPic from './img/kb.jpg';
@@ -13,7 +13,6 @@ Menu.propTypes = {};
 function Menu() {
     const {lang, setLang} = useContext(LangContext);
     const [activeKey, setActiveKey] = useState(window?.location?.pathname)
-
 
     const renderAvatar = () => {
         return (<div className="avatar-container">
