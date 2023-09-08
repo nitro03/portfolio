@@ -1,40 +1,21 @@
 import React, {useContext} from 'react';
-import classNames from 'classnames';
-import translator from '../../i18n/translator';
+import PropTypes from 'prop-types';
 
 import "./menu.scss";
-import {Container, Nav, Navbar} from 'react-bootstrap';
-import {LangContext} from '../../contexts/LangContext';
+import MenuMobile from './MenuMobile';
+import SideMenu from './SideMenu';
 
-Menu.propTypes = {};
+Menu.propTypes = {
+    isMobile: PropTypes.bool
+};
 
-function Menu() {
-    const activeKey = window?.location?.pathname;
-    const {lang, setLang} = useContext(LangContext);
+function Menu(props) {
+    const {isMobile} = props;
 
-    return (
-        <Navbar expand="lg" className="bg-body-tertiary justify-content-center" data-bs-theme="dark">
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" activeKey={activeKey}>
-                        <Nav.Link href="/">{translator( "home", lang)}</Nav.Link>
-                        <Nav.Link href="/career">{translator( "Career", lang)}</Nav.Link>
-                        <Nav.Link href="/projects">{translator( "Projects", lang)}</Nav.Link>
-                        <Nav.Link href="/freetime">{translator( "Free_Time", lang)}</Nav.Link>
-                        <Nav.Link href="/contact">{translator( "Contact", lang)}</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-                <div className="justify-content-end ">
-                    <ul className="lang-change text-white-50">
-                        <li className={classNames("btn", {active: lang === "en"})} onClick={()=>{setLang("en")}}>EN</li>
-                        <li>|</li>
-                        <li className={classNames("btn",{active: lang === "pl"})} onClick={()=>{setLang("pl")}}>PL</li>
-                    </ul>
-                </div>
-            </Container>
-        </Navbar>
-    );
+    if (isMobile) {
+        return (<MenuMobile/>);
+    }
+    return (<SideMenu/>);
 }
 
 export default Menu;

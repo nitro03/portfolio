@@ -7,17 +7,26 @@ import Career from '../Career/Career';
 import Projects from '../Projects/Projects';
 import FreeTime from '../FreeTime/FreeTime';
 import Contact from '../Contact/Contact';
+import {Col, Container, Row} from 'react-bootstrap';
 
-function Content() {
+function Content(props) {
+
     return (
         <main className="content bg-dark bg-opacity-75 py-5 px-5">
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/career" element={<Career/>} />
-                <Route path="/projects" element={<Projects/>} />
-                <Route path="/freetime" element={<FreeTime/>} />
-                <Route path="/contact" element={<Contact/>} />
-            </Routes>
+            <Container fluid className={"p-0"}>
+                <Row>
+                    <Col lg={12}>
+                        <Routes>
+                            <Route path="/" element={<Home/>} />
+                            <Route path="/career" element={<Career/>} />
+                            <Route path="/projects" element={<Projects/>} />
+                            <Route path="/freetime" element={<FreeTime/>} />
+                            <Route path="/contact" element={<Contact/>} />
+                        </Routes>
+                    </Col>
+                </Row>
+            </Container>
+
         </main>
     );
 }

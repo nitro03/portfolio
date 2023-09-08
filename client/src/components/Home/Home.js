@@ -1,17 +1,16 @@
 import React, {useContext} from 'react';
-import {Col, Container, Row, Image, Card} from 'react-bootstrap';
+import {Col, Container, Row, Card} from 'react-bootstrap';
 import translator from '../../i18n/translator';
 import {LangContext} from '../../contexts/LangContext';
+
+import './home.scss';
 
 function Home() {
     const {lang} = useContext(LangContext);
     return (
         <Container>
             <Row>
-                <Col xs={4}>
-                    <Image src="https://picsum.photos/300/300" roundedCircle/>
-                </Col>
-                <Col xs={8}>
+                <Col xs={12}>
                     <Card className="bg-white bg-opacity-50">
                         <Card.Body>
                             <Card.Title className="fs-1">{translator("hello", lang)}</Card.Title>
