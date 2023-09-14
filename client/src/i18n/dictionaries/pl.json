@@ -41,5 +41,12 @@
   "message_not_sent": "Ups, coś poszło nie tak",
   "contact_confirmation": "Dziękuję za wysłanie wiadomości! Odpowiem najszybciej jak będę mógł!",
   "contact_error_msg": "Niestety wysłanie wiadomości nie powiodło się, spróbuj ponownie później :(",
-  "close": "Zamknij"
+  "close": "Zamknij",
+  "welcome_hello_msg": "Witaj",
+  "welcome_name_msg": "Nazywam się Krzysztof Bartosik.",
+  "welcome_profession1_msg": "Jestem Web Developerem.",
+  "welcome_profession2_msg": "Jestem inżynierem.",
+  "welcome_profession3_msg": "Jestem managerem.",
+  "welcome_location_msg": "Pochodzę z Krakowa",
+  "welcome_btn_msg": "Skontaktuj się"
 }

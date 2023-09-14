@@ -19,7 +19,7 @@ function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= WIDTH_LG_BREAKPOINT);
 
     useEffect(() => {
-        document.title = 'Nitrax entertainment';
+        document.title = 'Nitrax Software - Krzysztof Bartosik';
         const handleWindowResize = () => {
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;

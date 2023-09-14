@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './fonts/fonts.css';
+
 import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

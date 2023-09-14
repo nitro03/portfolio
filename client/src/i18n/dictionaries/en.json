@@ -40,5 +40,12 @@
   "message_not_sent": "Oops, something went wrong",
   "contact_confirmation": "Thanks for sending me a message! I'm gonna answer as soon as possible!",
   "contact_error_msg": "Unfortunately message has not been sent. Try again later :(",
-  "close": "Close"
+  "close": "Close",
+  "welcome_hello_msg": "Welcome",
+  "welcome_name_msg": "I'm Krzysztof Bartosik.",
+  "welcome_profession1_msg": "I'm Web Developer.",
+  "welcome_profession2_msg": "I'm Engineer.",
+  "welcome_profession3_msg": "I'm Manager.",
+  "welcome_location_msg": "Based in Cracow, Poland",
+  "welcome_btn_msg": "Contact me"
 }
