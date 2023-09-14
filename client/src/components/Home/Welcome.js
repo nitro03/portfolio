@@ -26,7 +26,7 @@ function Welcome() {
         <div className="welcome-container">
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col md={8}>
+                    <Col md={10}>
                         <div className="welcome-typewriter-container">
                             <span className="welcome-typewriter-line-1">{translator("welcome_hello_msg", lang)}</span>
                             <Typewriter options={typewriterOptions}/>

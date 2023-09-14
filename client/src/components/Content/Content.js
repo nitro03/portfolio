@@ -16,7 +16,7 @@ Content.propTypes = {
 
 function Content({isMobile}) {
 
-    const classes = classNames("content content bg-dark bg-opacity-75", {
+    const classes = classNames("content", {
         'mobile': isMobile
     })
     return (
