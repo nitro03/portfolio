@@ -13,7 +13,7 @@ Footer.propTypes = {
 
 function Footer({isMobile}) {
     const {lang} = useContext(LangContext);
-    const classes = classNames("bg-dark", {
+    const classes = classNames({
         'mobile': isMobile
     })
     return (
