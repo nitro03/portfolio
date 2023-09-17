@@ -1,3 +1,66 @@
-.content {
+@import "../../utils/colors.scss";
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  height: 100vh;
+  width: 80vw;
+}
+
+.content-container.mobile {
+  position: fixed;
+  top: 10vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.content-header {
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+
+.content-header-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-header h1 {
+  align-self: center;
+  justify-self: center;
+  font-family: 'Poppins-ExtraBold';
+  font-size: 130px;
+  color: $bgColor;
+  opacity: 0.1;
+  font-weight: 1000;
+}
+
+.content-header p {
+  position: absolute;
+  align-self: center;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-header p:after {
+  content: " ";
+  position: absolute;
+  align-self: flex-end;
+  width: 33%;
+  border-bottom: 3px solid $active-element-color;
 }

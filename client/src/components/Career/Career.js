@@ -5,11 +5,17 @@ import {Timeline} from '@mui/lab';
 import TimelinePart from './TimelinePart';
 import {LangContext} from '../../contexts/LangContext';
 import translator from '../../i18n/translator';
+import ContentHeader from '../Content/ContentHeader';
 
 function Career() {
     const {lang} = useContext(LangContext);
     return (
-        <Container>
+        <Container className="bg-light">
+            <Row>
+                <Col xs={12} position={"center"}>
+                    <ContentHeader title={"career_title_desc"} bgTitle={"career"} />
+                </Col>
+            </Row>
             <Row>
                 <Col xs={12}>
                     <Timeline position="center">
@@ -25,7 +31,7 @@ function Career() {
                 </Col>
             </Row>
         </Container>
-    );
+);
 }
 
 export default Career;

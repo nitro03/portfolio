@@ -2,18 +2,19 @@
 @import 'utils/colors';
 html {
   height: 100%;
-  font-family: Poppins;
+  font-family: 'Poppins-Light';
   font-size: 18px;
 }
 
 body {
   height: 100%;
-  background-color: $menu-bg-color !important;
+  background-color: $bgColor;
 }
 
 main {
   height: 100%;
   overflow: auto;
+  color: $font-color-dark;
 }
 
 #root {
@@ -22,24 +23,11 @@ main {
   text-align: center;
 }
 
-.content {
-  color: $fontColor;
+.bg-light {
+  background-color: $bgColorLight;
+  color: $font-color-dark;
 }
 
-.content-container {
-  height: calc(100% - $footerHeight);
-  width: 80vw;
-}
-.content-container.mobile{
-  position: fixed;
-  top: 10vh;
-  width: 100vw;
-  height: 100vh;
-}
-
-.container-fluid {
-  height: 100%;
-}
 
 
 

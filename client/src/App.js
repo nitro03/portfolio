@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import Menu from './components/Menu/Menu';
 import Content from './components/Content/Content';
-import Footer from './components/Footer/Footer';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-import {Col, Container, Row} from 'react-bootstrap';
 import LangContextProvider from './contexts/LangContext';
-import './App.scss';
 import classNames from 'classnames';
+
+import './fonts/fonts.css';
+import './index.scss';
+import './App.scss';
 
 const WIDTH_LG_BREAKPOINT = 991;
 
@@ -49,7 +50,6 @@ function App() {
                     <Menu isMobile={isMobile}/>
                     <div className={contentClasses}>
                         <Content isMobile={isMobile}/>
-                        <Footer isMobile={isMobile}/>
                     </div>
                 </div>
             </Router>

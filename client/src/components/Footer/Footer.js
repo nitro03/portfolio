@@ -1,11 +1,10 @@
 import React, {useContext} from 'react';
-import {Container} from 'react-bootstrap';
-import translator from '../../i18n/translator';
-
-import './footer.scss';
-import {LangContext} from '../../contexts/LangContext';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import translator from '../../i18n/translator';
+import {LangContext} from '../../contexts/LangContext';
+
+import './footer.scss';
 
 Footer.propTypes = {
     isMobile: PropTypes.bool
