@@ -3,11 +3,8 @@ import PropTypes from 'prop-types';
 import {LangContext} from '../../contexts/LangContext';
 import translator from '../../i18n/translator';
 
-ContentHeader.propTypes = {
-    title: PropTypes.string.isRequired,
-    bgTitle: PropTypes.string.isRequired
-}
-function ContentHeader(props) {
+
+const ContentHeader = (props) => {
     const {title, bgTitle} = props;
     const {lang} = useContext(LangContext);
 
@@ -22,6 +19,11 @@ function ContentHeader(props) {
 
         </div>
     );
+}
+
+ContentHeader.propTypes = {
+    title: PropTypes.string.isRequired,
+    bgTitle: PropTypes.string.isRequired
 }
 
 export default ContentHeader;

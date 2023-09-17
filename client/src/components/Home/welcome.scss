@@ -44,29 +44,10 @@
   font-size: 24px;
   font-family: "Poppins-Thin";
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-.welcome-contact-btn {
-  margin-top: 50px;
-  padding: 10px;
-  border: 3px solid $active-element-color;
-  background-color: transparent;
-  border-radius: 100px;
 
-  a {
-    color: $active-element-color;
-    text-decoration: none;
-  }
-}
-.welcome-contact-btn:hover {
-  background-color: $active-element-color;
-  transition: all .1s linear;
-
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-}
 
 $typewriterFontSize: 48px;
 /* lib typewriter text*/

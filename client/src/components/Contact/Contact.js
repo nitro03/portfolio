@@ -6,6 +6,7 @@ import {LangContext} from '../../contexts/LangContext';
 import call from './call';
 
 import './contact.scss';
+import '../common/navButton.scss';
 
 function Contact() {
     const MSG_FIELD_ROWS = 10;
@@ -157,7 +158,7 @@ function Contact() {
                     <Form.Label>{translator('message_label', lang)}</Form.Label>
                     <Form.Control as="textarea" required rows={MSG_FIELD_ROWS} value={msg} onChange={onInputChange}/>
                 </Form.Group>
-                <Button className="contact-form__submit-btn" variant="primary" type="submit" size="lg">
+                <Button className="btn-main" type="submit">
                     <EmailIcon/>
                     <span className="contact-form__submit-btn__span">{translator('submit_btn_label', lang)}</span>
                 </Button>

@@ -1,0 +1,29 @@
+@import '../../utils/colors.scss';
+
+.btn-main {
+  padding: 10px;
+  color: $active-element-color;
+  border: 3px solid $active-element-color;
+  background-color: transparent;
+  border-radius: 100px;
+  width: fit-content;
+
+  a {
+    color: $active-element-color;
+    text-decoration: none;
+  }
+
+  svg {
+    padding-right: 5px;
+  }
+}
+.btn-main:hover {
+  background-color: $active-element-color;
+  border: 3px solid $active-element-color;
+  transition: all .1s linear;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

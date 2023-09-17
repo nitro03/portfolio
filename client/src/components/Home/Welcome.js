@@ -7,6 +7,7 @@ import Typewriter from 'typewriter-effect';
 import {Link} from 'react-router-dom';
 
 import './welcome.scss';
+import NavButton from '../common/NavButton';
 
 function Welcome() {
     const {lang} = useContext(LangContext);
@@ -22,6 +23,8 @@ function Welcome() {
         cursor: "_"
     };
 
+    const buttonLabel = "welcome_btn_msg";
+
     return (
         <div className="welcome-container">
             <Container>
@@ -31,9 +34,7 @@ function Welcome() {
                             <span className="welcome-typewriter-line-1">{translator("welcome_hello_msg", lang)}</span>
                             <Typewriter options={typewriterOptions}/>
                             <span className="welcome-typewriter-line-3">{translator("welcome_location_msg", lang)}</span>
-                            <button className="welcome-contact-btn">
-                                <Link to="/contact">{translator("welcome_btn_msg", lang)}</Link>
-                            </button>
+                            <NavButton label={buttonLabel} to={"/contact"} />
                         </div>
                     </Col>
                 </Row>
