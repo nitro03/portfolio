@@ -1,19 +1,55 @@
+@import '../../../utils/colors';
+
 .panel {
-  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  margin-bottom: 50px;
+  gap: 25px;
+
+  &.mobile {
+    flex-direction: column;
+  }
 }
 
 .content-panel-description {
-  background: rgba(255, 255, 255, 0.25);
-  text-align: justify;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h1 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 18px;
+  }
+
+  &.mobile {
+    align-items: center;
+    width: 100%
+  }
 }
 
 .panel-image {
   display: block;
   overflow: hidden;
   max-width: 300px;
+
+  &.mobile {
+    max-height: 300px;
+    max-width: 100%;
+  }
 }
+
+
 
 .panel-image > img {
   width: 100%;
-  height: 100%;
 }

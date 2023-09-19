@@ -1,10 +1,11 @@
 import React, {useContext} from 'react';
-import {Container} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 import translator from '../../i18n/translator';
 import hobbiesData from './HobbiesData';
 import Panel from '../Panel/Panel';
 
 import {LangContext} from '../../contexts/LangContext';
+import ContentHeader from '../Content/ContentHeader';
 
 function FreeTime() {
 
@@ -27,6 +28,11 @@ function FreeTime() {
 
     return (
         <Container>
+            <Row>
+                <Col xs={12} position={"center"}>
+                    <ContentHeader title={"free_time"} bgTitle={"free_time_title_desc"}/>
+                </Col>
+            </Row>
             {renderFreeTimePanels()}
         </Container>
     );

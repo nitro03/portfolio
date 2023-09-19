@@ -47,8 +47,11 @@
   "welcome_profession1_msg": "Jestem Web Developerem.",
   "welcome_profession2_msg": "Jestem inżynierem.",
   "welcome_profession3_msg": "Jestem managerem.",
-  "welcome_location_msg": "Pochodzę z Krakowa",
+  "welcome_location_msg": "Mieszkam w Krakowie",
   "welcome_btn_msg": "Skontaktuj się",
   "career_title_desc": "Praca zawodowa",
+  "contact_title_desc": "Napisz do mnie",
+  "projects_title_desc": "Moje projekty",
+  "free_time_title_desc": "Hobby",
   "now": "teraz"
 }

@@ -106,6 +106,7 @@ $avatarSize: 200px;
 
 nav {
   background-color: $menu-bg-color;
+  z-index: 10;
 }
 
 .navigation-buttons-container {

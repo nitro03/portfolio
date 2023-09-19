@@ -4,10 +4,9 @@ import {Container, Row, Col} from 'react-bootstrap';
 import translator from '../../i18n/translator';
 import {LangContext} from '../../contexts/LangContext';
 import Typewriter from 'typewriter-effect';
-import {Link} from 'react-router-dom';
+import NavButton from '../common/NavButton';
 
 import './welcome.scss';
-import NavButton from '../common/NavButton';
 
 function Welcome() {
     const {lang} = useContext(LangContext);

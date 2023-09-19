@@ -7,6 +7,7 @@ import call from './call';
 
 import './contact.scss';
 import '../common/navButton.scss';
+import ContentHeader from '../Content/ContentHeader';
 
 function Contact() {
     const MSG_FIELD_ROWS = 10;
@@ -167,6 +168,11 @@ function Contact() {
     };
     return (
         <Container>
+            <Row>
+                <Col xs={12} position={"center"}>
+                    <ContentHeader title={"contact_title_desc"} bgTitle={"contact"}/>
+                </Col>
+            </Row>
             <Row className="justify-content-md-center">
                 <Col lg="6">
                     {renderInfo()}
