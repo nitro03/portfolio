@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -24,6 +24,6 @@ function MenuHamburger({callback, isExpanded}) {
             <span className="line"></span>
         </div>
     );
-};
+}
 
 export default MenuHamburger;
