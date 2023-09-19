@@ -1,0 +1,13 @@
+.career-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .row {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
