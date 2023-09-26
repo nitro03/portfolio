@@ -14,8 +14,7 @@ import './App.scss';
 const WIDTH_LG_BREAKPOINT = 991;
 
 function App() {
-    // eslint-disable-next-line no-unused-vars
-    const [windowSize, setWindowSize] = useState([
+    const [, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight,
     ]);
