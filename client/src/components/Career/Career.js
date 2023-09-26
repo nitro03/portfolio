@@ -30,7 +30,8 @@ function Career(props) {
                         period={`2023-07 - ${translator("now", lang)}`}
                         description={translator("team_leader_desc_new", lang)}
                         position={translator("team_leader", lang)}
-                        employer="Comarch"/>
+                        employer="Comarch"
+                        isMobile={isMobile}/>
                 </Col>
             </Row>
             <Row>
@@ -39,7 +40,8 @@ function Career(props) {
                         period="2021-10 - 2023-06"
                         description={translator("director_desc", lang)}
                         position={translator("director", lang)}
-                        employer="Comarch"/>
+                        employer="Comarch"
+                        isMobile={isMobile}/>
                 </Col>
             </Row>
             <Row>
@@ -48,7 +50,8 @@ function Career(props) {
                         period="2016-06 - 2021-09"
                         description={translator("team_leader_desc", lang)}
                         position={translator("team_leader", lang)}
-                        employer="Comarch"/>
+                        employer="Comarch"
+                        isMobile={isMobile}/>
                 </Col>
             </Row>
             <Row>
@@ -57,7 +60,8 @@ function Career(props) {
                         period="2013-06 - 2016-06"
                         description={translator("developer_desc", lang)}
                         position={translator("developer", lang)}
-                        employer="Comarch"/>
+                        employer="Comarch"
+                        isMobile={isMobile}/>
                 </Col>
             </Row>
 
