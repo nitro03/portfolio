@@ -6,10 +6,12 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 1rem;
 
   .btn-main {
     align-self: center;
   }
+}
 
+.form-container {
+  margin-bottom: 75px;
 }

@@ -19,7 +19,6 @@ function Projects(props) {
     const renderProjectsPanels = () => {
         const projects = getProjectsData();
 
-
         return projects.map((project, index) => {
             const {imgSrc, title, descriptionLabel, link} = project;
 
@@ -30,14 +29,13 @@ function Projects(props) {
                            description={translator(descriptionLabel, lang)}
                            isMobile={isMobile} />);
         })
-
     };
 
     return (
         <Container>
             <Row>
                 <Col xs={12} position={"center"}>
-                    <ContentHeader title={"projects_title_desc"} bgTitle={"projects"}/>
+                    <ContentHeader title={"projects_title_desc"} isMobile={isMobile} bgTitle={"projects"}/>
                 </Col>
             </Row>
             {renderProjectsPanels()}

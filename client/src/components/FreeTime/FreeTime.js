@@ -11,21 +11,22 @@ import PropTypes from 'prop-types';
 FreeTime.propTypes = {
     isMobile: PropTypes.bool
 };
+
 function FreeTime(props) {
 
     const {lang} = useContext(LangContext);
     const {isMobile} = props;
     const renderFreeTimePanels = () => {
         if (Array.isArray(hobbiesData)) {
-            const panelsList = hobbiesData.map((hobby, index) => {
+            return hobbiesData.map((hobby, index) => {
                 const {imgSrc, descriptionLabel, title, link} = hobby;
                 return <Panel key={`hobby-panel-${index}`}
-                                imgSrc={imgSrc}
+                              imgSrc={imgSrc}
                               title={translator(title, lang)}
                               description={translator(descriptionLabel, lang)}
-                              link={link}/>
+                              link={link}
+                              isMobile={isMobile}/>
             });
-            return panelsList;
         }
         console.warn('Hobbies are empty');
         return <div>No Data</div>;

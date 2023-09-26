@@ -1,14 +1,14 @@
 import React, {useContext, useState} from 'react';
 import {Button, Col, Container, Form, Row, Modal} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import EmailIcon from '@mui/icons-material/Email';
 import translator from '../../i18n/translator';
 import {LangContext} from '../../contexts/LangContext';
-import call from './call';
 
+import call from './call';
 import './contact.scss';
 import '../common/navButton.scss';
 import ContentHeader from '../Content/ContentHeader';
-import PropTypes from 'prop-types';
 
 Contact.propTypes = {
     isMobile: PropTypes.bool
@@ -169,6 +169,7 @@ function Contact(props) {
                     <EmailIcon/>
                     <span className="contact-form__submit-btn__span">{translator('submit_btn_label', lang)}</span>
                 </Button>
+
             </Form>
         )
     };
@@ -185,7 +186,7 @@ function Contact(props) {
                     {renderModal()}
                 </Col>
             </Row>
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-md-center form-container">
                 <Col lg="6">
                     {renderForm()}
                 </Col>

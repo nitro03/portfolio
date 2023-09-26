@@ -21,7 +21,6 @@ const Panel = (props) => {
         'mobile': isMobile
     });
 
-
     return (
 
         <Row>

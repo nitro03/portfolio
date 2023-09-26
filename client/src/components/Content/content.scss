@@ -3,6 +3,9 @@
 .content {
   display: flex;
   flex-direction: column;
+  >.container {
+    padding-bottom: 50px;
+  }
 }
 
 .content-container {
@@ -47,7 +50,7 @@
 .content-header h1 {
   align-self: center;
   justify-self: center;
-  font-family: 'Poppins-ExtraBold';
+  font-family: 'Poppins-ExtraBold', serif;
   font-size: 130px;
   color: $bgColor;
   opacity: 0.1;
