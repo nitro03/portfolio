@@ -1,4 +1,5 @@
 @import '../../../utils/colors';
+$imageSize: 300px;
 
 .panel {
   border: 1px solid $borderColor;
@@ -12,11 +13,12 @@
 
   &.mobile {
     flex-direction: column;
+    align-items: center
   }
 }
 
 .content-panel-description {
-  width: 60%;
+  width: calc(100% - $imageSize);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -39,15 +41,17 @@
 .panel-image {
   display: block;
   overflow: hidden;
-  max-width: 300px;
+  width: $imageSize;
+  height: $imageSize;
+  border-radius: 5px;
 
-  &.mobile {
-    max-height: 300px;
-    max-width: 100%;
-  }
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+  //&.mobile {
+  //  max-height: 300px;
+  //  max-width: 100%;
+  //}
 }
-
-
 
 .panel-image > img {
   width: 100%;
