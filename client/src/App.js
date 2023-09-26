@@ -4,6 +4,7 @@ import Content from './components/Content/Content';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 import LangContextProvider from './contexts/LangContext';
+import NavContextProvider from './contexts/NavContext';
 import classNames from 'classnames';
 
 import './fonts/fonts.css';
@@ -26,7 +27,7 @@ function App() {
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
             setWindowSize([windowWidth, windowHeight]);
-            if(windowWidth <= WIDTH_LG_BREAKPOINT){
+            if (windowWidth <= WIDTH_LG_BREAKPOINT) {
                 setIsMobile(true);
             } else {
                 setIsMobile(false);
@@ -46,14 +47,16 @@ function App() {
     });
     return (
         <LangContextProvider>
-            <Router>
-                <div className={classes}>
-                    <Menu isMobile={isMobile}/>
-                    <div className={contentClasses}>
-                        <Content isMobile={isMobile}/>
+            <NavContextProvider>
+                <Router>
+                    <div className={classes}>
+                        <Menu isMobile={isMobile}/>
+                        <div className={contentClasses}>
+                            <Content isMobile={isMobile}/>
+                        </div>
                     </div>
-                </div>
-            </Router>
+                </Router>
+            </NavContextProvider>
         </LangContextProvider>
     );
 }

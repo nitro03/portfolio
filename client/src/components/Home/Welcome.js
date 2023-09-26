@@ -7,9 +7,11 @@ import Typewriter from 'typewriter-effect';
 import NavButton from '../common/NavButton';
 
 import './welcome.scss';
+import {NavContext} from '../../contexts/NavContext';
 
 function Welcome() {
     const {lang} = useContext(LangContext);
+    const {setLink} = useContext(NavContext);
     const typewriterOptions = {
         strings: [
             translator("welcome_name_msg", lang),
@@ -23,6 +25,9 @@ function Welcome() {
     };
 
     const buttonLabel = "welcome_btn_msg";
+    const setContactLink = () => {
+        setLink('/contact');
+    };
 
     return (
         <div className="welcome-container">
@@ -32,8 +37,9 @@ function Welcome() {
                         <div className="welcome-typewriter-container">
                             <span className="welcome-typewriter-line-1">{translator("welcome_hello_msg", lang)}</span>
                             <Typewriter options={typewriterOptions}/>
-                            <span className="welcome-typewriter-line-3">{translator("welcome_location_msg", lang)}</span>
-                            <NavButton label={buttonLabel} to={"/contact"} />
+                            <span
+                                className="welcome-typewriter-line-3">{translator("welcome_location_msg", lang)}</span>
+                            <NavButton label={buttonLabel} to={"/contact"} onClick={setContactLink}/>
                         </div>
                     </Col>
                 </Row>

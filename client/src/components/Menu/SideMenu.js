@@ -1,19 +1,20 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import classNames from 'classnames';
-import translator from '../../i18n/translator';
-
 import {Image} from 'react-bootstrap';
+
+import translator from '../../i18n/translator';
 import {LangContext} from '../../contexts/LangContext';
-import myPic from './img/kb.jpg';
+import {NavContext} from '../../contexts/NavContext';
 import MenuItem from './MenuItem';
 
+import myPic from './img/kb.jpg';
 import "./css/menu.scss";
 
-Menu.propTypes = {};
+SideMenu.propTypes = {};
 
-function Menu() {
+function SideMenu() {
     const {lang, setLang} = useContext(LangContext);
-    const [activeKey, setActiveKey] = useState(window?.location?.pathname)
+    const {link, setLink} = useContext(NavContext);
 
     const renderAvatar = () => {
         return (<div className="avatar-container">
@@ -22,17 +23,18 @@ function Menu() {
             </div>
         </div>);
     };
+
     const renderMenuItems = () => {
         return (<div className='menu-buttons'>
-                <MenuItem url='/' label={translator("home", lang)} activeKey={activeKey} setActiveKey={setActiveKey}/>
-                <MenuItem url='/career' label={translator("Career", lang)} activeKey={activeKey}
-                          setActiveKey={setActiveKey}/>
-                <MenuItem url='/projects' label={translator("Projects", lang)} activeKey={activeKey}
-                          setActiveKey={setActiveKey}/>
-                <MenuItem url='/freetime' label={translator("Free_Time", lang)} activeKey={activeKey}
-                          setActiveKey={setActiveKey}/>
-                <MenuItem url='/contact' label={translator("Contact", lang)} activeKey={activeKey}
-                          setActiveKey={setActiveKey}/>
+                <MenuItem url='/' label={translator("home", lang)} activeKey={link} setActiveKey={setLink}/>
+                <MenuItem url='/career' label={translator("Career", lang)} activeKey={link}
+                          setActiveKey={setLink}/>
+                <MenuItem url='/projects' label={translator("Projects", lang)} activeKey={link}
+                          setActiveKey={setLink}/>
+                <MenuItem url='/freetime' label={translator("Free_Time", lang)} activeKey={link}
+                          setActiveKey={setLink}/>
+                <MenuItem url='/contact' label={translator("Contact", lang)} activeKey={link}
+                          setActiveKey={setLink}/>
             </div>
         );
     }
@@ -63,4 +65,4 @@ function Menu() {
     );
 }
 
-export default Menu;
+export default SideMenu;
