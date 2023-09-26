@@ -7,14 +7,21 @@ import ContentHeader from '../Content/ContentHeader';
 import CareerCard from './CareerCard';
 
 import './career.scss'
+import PropTypes from 'prop-types';
 
-function Career() {
+Career.propTypes = {
+    isMobile: PropTypes.bool
+};
+
+function Career(props) {
     const {lang} = useContext(LangContext);
+    const {isMobile} = props;
+
     return (
         <Container className="bg-light career-container">
             <Row>
                 <Col xs={12} position={"center"}>
-                    <ContentHeader title={"career_title_desc"} bgTitle={"career"}/>
+                    <ContentHeader title={"career_title_desc"} isMobile={isMobile} bgTitle={"career"}/>
                 </Col>
             </Row>
             <Row>

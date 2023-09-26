@@ -24,10 +24,10 @@ function Content({isMobile}) {
         <main className={classes}>
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
-                <Route path="/career" element={<Career/>}/>
+                <Route path="/career" element={<Career isMobile={isMobile}/>}/>
                 <Route path="/projects" element={<Projects isMobile={isMobile}/>}/>
                 <Route path="/freetime" element={<FreeTime isMobile={isMobile}/>}/>
-                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/contact" element={<Contact isMobile={isMobile}/>}/>
             </Routes>
         </main>
     );

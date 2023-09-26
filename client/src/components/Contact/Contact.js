@@ -8,8 +8,13 @@ import call from './call';
 import './contact.scss';
 import '../common/navButton.scss';
 import ContentHeader from '../Content/ContentHeader';
+import PropTypes from 'prop-types';
 
-function Contact() {
+Contact.propTypes = {
+    isMobile: PropTypes.bool
+};
+
+function Contact(props) {
     const MSG_FIELD_ROWS = 10;
     const INPUT_EMAIL_ID = 'formControlEmail';
     const INPUT_NAME_ID = 'formControlName';
@@ -21,6 +26,7 @@ function Contact() {
     };
 
     const {lang} = useContext(LangContext);
+    const {isMobile} = props;
 
     const [formState, setFormState] = useState(INITIAL_STATE);
     const [validated, setValidated] = useState(false);
@@ -170,7 +176,7 @@ function Contact() {
         <Container>
             <Row>
                 <Col xs={12} position={"center"}>
-                    <ContentHeader title={"contact_title_desc"} bgTitle={"contact"}/>
+                    <ContentHeader title={"contact_title_desc"} isMobile={isMobile} bgTitle={"contact"}/>
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
