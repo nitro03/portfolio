@@ -1,19 +1,16 @@
 const express = require('express')
 const serverless = require('serverless-http');
-const path = require('path');
+// const path = require('path');
 const bodyParser = require('body-parser');
 const config = require('./config/config.json');
 const MailSender = require('./MailSender/MailSender');
 const app = express()
 
-const port = 1234
 const {transporterOptions} = config;
 const ms = MailSender.getInstance(transporterOptions);
 const router = express.Router();
 
-router.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
+
 
 router.post('/rest/send-mail', (req, res) => {
     const body = req.body;
@@ -27,6 +24,10 @@ router.post('/rest/send-mail', (req, res) => {
 
     ms.send(body, onSuccess, onError);
 });
+
+// router.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+// });
 
 app.use(express.static("../client/build"));
 app.use(bodyParser.json());
