@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "run": "node index.js",
+    "netlify": "netlify-lambda build express",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Krzysztof Bartosik",
