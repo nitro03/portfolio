@@ -29,9 +29,9 @@ router.post('/rest/send-mail', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 // });
 
-app.use(express.static("../client/build"));
 app.use(bodyParser.json());
 app.use('/', router);
+app.use(express.static("../client/build"));
 
 module.exports = app;
 module.exports.handler = serverless(app);
