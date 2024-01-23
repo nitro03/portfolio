@@ -28,6 +28,10 @@ app.post('/rest/send-mail', (req, res) => {
     ms.send(body, onSuccess, onError);
 });
 
+app.get('/status', (req, res)=>{
+    res.status(200).json({msg: "works fine"}).send();
+})
+
 app.get('*', (req, res) => {
     console.info("podbijam po html")
     res.sendFile(path.join(__dirname, FRONTEND_PATH, 'index.html'), { headers: { 'Content-Type': 'text/html' }});
