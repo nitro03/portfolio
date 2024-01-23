@@ -32,9 +32,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-and-run": "react-scripts build && node server/index.js",
-    "server-dev": "nodemon server/index.js",
-    "server-run": "node server/index.js"
+    "build-and-run": "react-scripts build && node api/index.js",
+    "server-dev": "nodemon api/index.js",
+    "server-run": "node api/index.js"
   },
   "eslintConfig": {
     "extends": [
