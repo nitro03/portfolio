@@ -9,11 +9,13 @@ const port = 1234
 const {transporterOptions} = config;
 const ms = MailSender.getInstance(transporterOptions);
 
-app.use(express.static("../client/build"));
+const FRONTEND_PATH = "../build"
+
 app.use(bodyParser.json());
+app.use(express.static("build"));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, FRONTEND_PATH, 'index.html'), { headers: { 'Content-Type': 'text/html' }});
 });
 
 app.post('/rest/send-mail', (req, res) => {
