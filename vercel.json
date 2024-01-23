@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "api/**/*.js", "use": "@now/node" },
-    { "src": "public/**/*", "use": "@now/static" }
+    { "src": "build/**/*", "use": "@now/static" }
   ],
   "routes": [{ "src": "/api/(.*)", "dest": "/api/$1" }, { "src": "/(.*)", "dest": "/$1" }]
 }
