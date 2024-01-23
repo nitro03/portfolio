@@ -1,42 +1,20 @@
-const express = require('express')
-const path = require('path');
-const bodyParser = require('body-parser');
-const config = require('./config/config.json');
-const MailSender = require('./MailSender/MailSender');
-const app = express()
+const app = require('express')();
+const { v4 } = require('uuid');
 
-const port = 1234
-const {transporterOptions} = config;
-const ms = MailSender.getInstance(transporterOptions);
+app.get('/api', (req, res) => {
+    const path = `/api/item/${v4()}`;
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+    res.end(`Hello! Go to item: <a href="${path}">${path}</a>`);
+});
 
-const FRONTEND_PATH = "../build"
-
-app.use(bodyParser.json());
-app.use(express.static("build"));
-
-app.post('/rest/send-mail', (req, res) => {
-    const body = req.body;
-    console.info("podbijam po maila")
-    const onError = (err) => {
-        console.error(err)
-        res.status(500).json(err).send();
-    };
-    const onSuccess = (info) => {
-        res.status(200).json(info).send();
-    };
-
-    ms.send(body, onSuccess, onError);
+app.get('/api/item/:slug', (req, res) => {
+    const { slug } = req.params;
+    res.end(`Item: ${slug}`);
 });
 
 app.get('/status', (req, res)=>{
     res.status(200).json({msg: "works fine"}).send();
 })
 
-app.get('*', (req, res) => {
-    console.info("podbijam po html")
-    res.sendFile(path.join(__dirname, FRONTEND_PATH, 'index.html'), { headers: { 'Content-Type': 'text/html' }});
-});
-
-app.listen(port, () => {
-    console.log(`App is listening on port ${port}`);
-});
+module.exports = app;
