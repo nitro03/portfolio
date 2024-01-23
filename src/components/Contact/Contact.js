@@ -48,7 +48,7 @@ function Contact(props) {
     }
 
     const sendMsg = (message) => {
-        const url = '/rest/send-mail'
+        const url = '/api/send-mail'
         const options = {
             url,
             method: 'POST',
