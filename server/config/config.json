@@ -1,0 +1,13 @@
+{
+  "transporterOptions": {
+    "port": 465,
+    "host": "smtp.gmail.com",
+    "auth": {
+      "user": "your.email@gmail.com",
+      "pass": "google-oauth-token"
+    },
+    "tls": {
+      "rejectUnauthorized": false
+    }
+  }
+}

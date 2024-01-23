@@ -1,0 +1,22 @@
+@import '../../utils/colors';
+@import '../../utils/constants.sass';
+
+footer {
+  position: relative;
+  font-size: 12px;
+  bottom: 0px;
+  height: $footerHeight;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer {
+  &.mobile {
+    position: sticky;
+    bottom: 0px;
+  }
+}
+
+footer > span {
+  align-self: center;
+}

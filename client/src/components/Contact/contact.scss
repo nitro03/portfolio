@@ -1,0 +1,17 @@
+.contact-info {
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .btn-main {
+    align-self: center;
+  }
+}
+
+.form-container {
+  margin-bottom: 75px;
+}

@@ -1,0 +1,33 @@
+@import 'utils/constants';
+@import 'utils/colors';
+html {
+  height: 100%;
+  font-family: 'Poppins-Light';
+  font-size: 18px;
+}
+
+body {
+  height: 100%;
+  background-color: $bgColor;
+}
+
+main {
+  height: 100%;
+  overflow: auto;
+  color: $font-color-dark;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.bg-light {
+  background-color: $bgColorLight;
+  color: $font-color-dark;
+}
+
+
+
+

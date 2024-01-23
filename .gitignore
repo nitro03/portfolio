@@ -1,0 +1,10 @@
+/server/client/static/
+/server/client/asset-manifest.json
+/server/client/favicon.ico
+/server/client/index.html
+/server/client/logo192.png
+/server/client/logo512.png
+/server/client/manifest.json
+/server/client/robots.txt
+/server/config/
+/server/node_modules/
