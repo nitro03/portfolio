@@ -32,7 +32,6 @@
     "eject": "react-scripts eject",
     "server-dev": "nodemon api/index.js",
     "server-run": "node api/index.js",
-    "vercel-build": "react-scripts build && mv build/* public/",
     "vercel-dev": "vercel dev"
   },
   "eslintConfig": {
