@@ -14,6 +14,10 @@ const FRONTEND_PATH = "../build"
 app.use(bodyParser.json());
 app.use(express.static("build"));
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, FRONTEND_PATH, 'index.html'), { headers: { 'Content-Type': 'text/html' }});
+});
+
 app.post('/rest/send-mail', (req, res) => {
     const body = req.body;
 
@@ -26,10 +30,6 @@ app.post('/rest/send-mail', (req, res) => {
     };
 
     ms.send(body, onSuccess, onError);
-});
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, FRONTEND_PATH, 'index.html'), { headers: { 'Content-Type': 'text/html' }});
 });
 
 app.listen(port, () => {
