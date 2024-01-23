@@ -16,7 +16,7 @@ app.use(express.static("build"));
 
 app.post('/rest/send-mail', (req, res) => {
     const body = req.body;
-
+    console.info("podbijam po maila")
     const onError = (err) => {
         console.error(err)
         res.status(500).json(err).send();
@@ -29,6 +29,7 @@ app.post('/rest/send-mail', (req, res) => {
 });
 
 app.get('*', (req, res) => {
+    console.info("podbijam po html")
     res.sendFile(path.join(__dirname, FRONTEND_PATH, 'index.html'), { headers: { 'Content-Type': 'text/html' }});
 });
 
