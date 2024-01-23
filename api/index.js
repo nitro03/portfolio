@@ -22,7 +22,6 @@ app.post('/rest/send-mail', (req, res) => {
     const body = req.body;
 
     const onError = (err) => {
-        console.error(err)
         res.status(500).json(err).send();
     };
     const onSuccess = (info) => {
