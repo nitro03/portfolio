@@ -13,7 +13,7 @@ class MailSender {
 
     static getInstance(transporterOptions) {
         if (!this.instance) {
-            this.instance = new MailSender(fillCredentials(transporterOptions));
+            this.instance = new MailSender(MailSender.fillCredentials(transporterOptions));
         }
 
         return this.instance;
