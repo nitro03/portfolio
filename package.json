@@ -14,6 +14,9 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "classnames": "^2.3.2",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
@@ -22,18 +25,13 @@
     "sass": "^1.63.6",
     "styled-components": "^6.0.2",
     "typewriter-effect": "^2.20.1",
-    "web-vitals": "^2.1.4",
-    "express": "^4.18.2",
-    "nodemailer": "^6.9.4",
-    "nodemon": "^3.0.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server-dev": "nodemon api/index.js",
-    "server-run": "node api/index.js",
     "vercel-dev": "vercel dev"
   },
   "eslintConfig": {
@@ -53,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prop-types": "^15.8.1"
   }
 }
