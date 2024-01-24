@@ -13,10 +13,26 @@ class MailSender {
 
     static getInstance(transporterOptions) {
         if (!this.instance) {
-            this.instance = new MailSender(transporterOptions);
+            this.instance = new MailSender(MailSender.fillCredentials(transporterOptions));
         }
 
         return this.instance;
+    }
+
+    static fillCredentials(transporterOptions) {
+        const envMailUser = process.env.MAIL_USER;
+        const envMailPass = process.env.MAIL_PASS;
+        if (transporterOptions?.auth) {
+            if (envMailUser && envMailPass) {
+                transporterOptions.auth['user'] = envMailUser;
+                transporterOptions.auth['pass'] = envMailPass;
+                return transporterOptions;
+            }
+            console.error('No env variables with mail user and pasword set!');
+            return transporterOptions;
+        }
+        console.error('No auth object in transporterOptions (MailSender)');
+        return transporterOptions;
     }
 
     prepareMailData(body) {
