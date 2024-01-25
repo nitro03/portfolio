@@ -52,5 +52,8 @@
   "contact_title_desc": "E-mail me",
   "projects_title_desc": "My projects",
   "free_time_title_desc": "Hobbies",
-  "now": "now"
+  "now": "now",
+  "email_placeholder": "name@example.com",
+  "name_placeholder": "Your name",
+  "message_placeholder": "Type message"
 }
