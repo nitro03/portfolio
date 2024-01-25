@@ -18,6 +18,7 @@
     padding-right: 5px;
   }
 }
+
 .btn-main:hover {
   background-color: $active-element-color;
   border: 3px solid $active-element-color;
@@ -33,5 +34,12 @@
   color: $active-element-color;
   background-color: transparent;
   border-color: $active-element-color;
-  box-shadow: 0 0 0 0.25rem rgba(49,132,253,.5);
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, .5);
+}
+
+.btn-main:disabled {
+  color: $disabled-element-color;
+  border: 3px solid $disabled-element-color;
+  background-color: transparent;
+  cursor: not-allowed;
 }

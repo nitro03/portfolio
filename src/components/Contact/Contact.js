@@ -9,6 +9,7 @@ import call from './call';
 import './contact.scss';
 import '../common/navButton.scss';
 import ContentHeader from '../Content/ContentHeader';
+import ReCaptchaComponent from "../ReCaptchaComponent/ReCaptchaComponent";
 
 Contact.propTypes = {
     isMobile: PropTypes.bool
@@ -30,6 +31,7 @@ function Contact(props) {
 
     const [formState, setFormState] = useState(INITIAL_STATE);
     const [validated, setValidated] = useState(false);
+    const [isCaptchaValid, setIsCaptchaValid] = useState(false);
     const [isModalShown, showModal] = useState(false);
     const [hasRequestPassed, setRequestPassed] = useState(false);
     const toggleModal = () => showModal(!isModalShown);
@@ -148,24 +150,42 @@ function Contact(props) {
         }
         console.error('Input Id is empty, state was\'nt set');
     }
+
+    const handleCaptcha = (isValid) => {
+        setIsCaptchaValid(isValid);
+    }
     const renderForm = () => {
         const {senderMail, senderName, msg} = formState
         return (
             <Form noValidate validated={validated} onSubmit={onSubmit} className="contact-form">
                 <Form.Group className="mb-3" controlId={INPUT_EMAIL_ID}>
                     <Form.Label>{translator('email_label', lang)}</Form.Label>
-                    <Form.Control type="email" required={true} placeholder="name@example.com" value={senderMail}
+                    <Form.Control type="email"
+                                  required={true}
+                                  placeholder={translator('email_placeholder', lang)}
+                                  value={senderMail}
                                   onChange={onInputChange}/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId={INPUT_NAME_ID}>
                     <Form.Label>{translator('name_label', lang)}</Form.Label>
-                    <Form.Control value={senderName} required onChange={onInputChange}/>
+                    <Form.Control value={senderName}
+                                  placeholder={translator('name_placeholder', lang)}
+                                  required
+                                  onChange={onInputChange}/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId={INPUT_MSG_ID}>
                     <Form.Label>{translator('message_label', lang)}</Form.Label>
-                    <Form.Control as="textarea" required rows={MSG_FIELD_ROWS} value={msg} onChange={onInputChange}/>
+                    <Form.Control as="textarea"
+                                  required
+                                  rows={MSG_FIELD_ROWS}
+                                  value={msg}
+                                  placeholder={translator('message_placeholder', lang)}
+                                  onChange={onInputChange}/>
                 </Form.Group>
-                <Button className="btn-main" type="submit">
+                <Form.Group className="mb-3">
+                    <ReCaptchaComponent onChange={handleCaptcha} lang={lang}/>
+                </Form.Group>
+                <Button className="btn-main" disabled={!isCaptchaValid} type="submit">
                     <EmailIcon/>
                     <span className="contact-form__submit-btn__span">{translator('submit_btn_label', lang)}</span>
                 </Button>
