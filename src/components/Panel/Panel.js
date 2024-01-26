@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button, Col, Row} from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import PanelImage from './PanelImage';
 
 import './scss/Panel.scss';
 import classNames from 'classnames';
+import LinkBtn from "../LinkBtn/LinkBtn";
 
 const Panel = (props) => {
     const {imgSrc, title, description, link, isMobile} = props;
 
     const renderLink = () => {
         if (link) {
-            return (<Button variant="link" href={link} className="link">Link</Button>)
+            return (<LinkBtn link={link}/>)
         }
     };
     const panelClasses = classNames("panel", {
