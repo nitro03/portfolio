@@ -20,9 +20,9 @@ function CareerCard(props) {
     return (
         <div className={classes}>
             <div className="career-card-period">{period}</div>
-            <span className="career-card-position">{position}</span>
-            <span className="career-card-employer">{employer}</span>
-            <div className="career-card-description">{description}</div>
+            <h3 className="career-card-position">{position}</h3>
+            <h2 className="career-card-employer">{employer}</h2>
+            <p className="career-card-description">{description}</p>
         </div>
     );
 }

@@ -24,30 +24,41 @@ const Tile = (props) => {
 
     const renderLink = () => {
         if (link) {
-            return (<Button variant="link" href={link} className="link">Link</Button>)
+            return (
+                <div className="tile_link">
+                    <a href={link} target="_blank">
+                        <Button className="btn-main">
+                            <span className="contact-form__submit-btn__span">{"Link"}</span>
+                        </Button>
+                    </a>
+                </div>
+            )
         }
     };
 
     const renderDescription = () => {
         // if (isExpanded) {
-            const tileCDescriptionClasses = classNames("tile_description", {
-                'isExpanded': isExpanded
-            });
-            return(
+        const tileCDescriptionClasses = classNames("tile_description", {
+            'isExpanded': isExpanded
+        });
+        return (
             <div className={tileCDescriptionClasses}>
                 <h3>{title}</h3>
                 <p>{description}</p>
                 {renderLink()}
-            </div>);
+            </div>
+        );
         // }
     }
 
     return (
         <div className={tileContainerClasses} onClick={handleClick}>
+
             <div className={tilePhotoClasses}>
                 <TileImage isExpanded={isExpanded} imgSrc={imgSrc}/>
             </div>
             {renderDescription()}
+
         </div>
     );
 };

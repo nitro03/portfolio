@@ -1,12 +1,12 @@
 $imageSize: 100%;
+$innerPadding: 10px 10px 0 10px;
+
 .tile_container {
   margin-bottom: 26px;
   transition: max-height 0.3s ease-in-out; /* Animation transition */
   border-radius: 5px;
   border: 1px solid rgb(222, 226, 230);
-  //&.isExpanded {
-  //  background: rgba(43, 43, 43, 0.1);
-  //}
+
 }
 
 .tile-image {
@@ -24,6 +24,8 @@ $imageSize: 100%;
   }
 }
 
+
+
 .tile_description {
   text-align: left;
   max-height: 0;
@@ -31,10 +33,17 @@ $imageSize: 100%;
   transition: all 0.3s ease-in;
 
   > h3 {
-    padding: 10px 10px 0 10px;
+    padding: $innerPadding;
+    font-weight: bolder;
+    font-size: 20px
   }
   > p {
-    padding: 10px 10px 0 10px;
+    padding: $innerPadding;
+  }
+
+  >.tile_link {
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
 
 
