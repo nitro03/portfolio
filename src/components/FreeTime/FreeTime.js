@@ -2,7 +2,6 @@ import React, {useContext, useState} from 'react';
 import {Col, Container, Row} from 'react-bootstrap';
 import translator from '../../i18n/translator';
 import hobbiesData from './HobbiesData';
-import Panel from '../Panel/Panel';
 
 import {LangContext} from '../../contexts/LangContext';
 import ContentHeader from '../Content/ContentHeader';
