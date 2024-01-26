@@ -1,7 +1,7 @@
 import React from 'react';
 import TileImage from "./TileImage";
 import classNames from "classnames";
-import {Button} from "react-bootstrap";
+import LinkBtn from "../../LinkBtn/LinkBtn";
 
 const Tile = (props) => {
     const {id, size, description, title, imgSrc, link, isMobile, onClick, isExpanded} = props;
@@ -25,13 +25,7 @@ const Tile = (props) => {
     const renderLink = () => {
         if (link) {
             return (
-                <div className="tile_link">
-                    <a href={link} target="_blank">
-                        <Button className="btn-main">
-                            <span className="contact-form__submit-btn__span">{"Link"}</span>
-                        </Button>
-                    </a>
-                </div>
+                <LinkBtn link={link}/>
             )
         }
     };
