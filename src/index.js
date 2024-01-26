@@ -4,7 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // bootstrap added to index.html directly to prevent styles overriding by _reboot.recaptcha_compoenent.scss
-// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/scss/bootstrap.min.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
