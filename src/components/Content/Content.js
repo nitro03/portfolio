@@ -10,6 +10,7 @@ import Contact from '../Contact/Contact';
 
 
 import "./content.scss"
+import DefaultPage from "../DefaultPage/DefaultPage";
 
 Content.propTypes = {
     isMobile: PropTypes.bool
@@ -28,6 +29,7 @@ function Content({isMobile}) {
                 <Route path="/projects" element={<Projects isMobile={isMobile}/>}/>
                 <Route path="/freetime" element={<FreeTime isMobile={isMobile}/>}/>
                 <Route path="/contact" element={<Contact isMobile={isMobile}/>}/>
+                <Route path="*" element={<DefaultPage isMobile={isMobile}/>}/>
             </Routes>
         </main>
     );

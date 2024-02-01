@@ -1,4 +1,5 @@
 import React from 'react';
+import {AnimatePresence, motion} from 'framer-motion';
 import TileImage from "./TileImage";
 import classNames from "classnames";
 import LinkBtn from "../../LinkBtn/LinkBtn";
@@ -16,7 +17,7 @@ const Tile = (props) => {
         'lg': size === 'lg'
     });
 
-    const handleClick = () => {
+    const handleClick = (e) => {
         if (typeof onClick === 'function') {
             onClick(id);
         }
@@ -31,28 +32,29 @@ const Tile = (props) => {
     };
 
     const renderDescription = () => {
-        // if (isExpanded) {
-        const tileCDescriptionClasses = classNames("tile_description", {
-            'isExpanded': isExpanded
-        });
-        return (
-            <div className={tileCDescriptionClasses}>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                {renderLink()}
-            </div>
-        );
-        // }
+        if (isExpanded) {
+            const tileCDescriptionClasses = classNames("tile_description", {
+                'isExpanded': isExpanded
+            });
+            return (
+                <motion.div className={tileCDescriptionClasses}>
+                    <motion.h3>{title}</motion.h3>
+                    <motion.p>{description}</motion.p>
+                    {renderLink()}
+                </motion.div>
+            );
+        }
+        return null;
     }
 
     return (
         <div className={tileContainerClasses} onClick={handleClick}>
-
             <div className={tilePhotoClasses}>
                 <TileImage isExpanded={isExpanded} imgSrc={imgSrc}/>
             </div>
-            {renderDescription()}
-
+            <motion.div layout={"size"}>
+                {renderDescription()}
+            </motion.div>
         </div>
     );
 };

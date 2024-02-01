@@ -3,7 +3,6 @@ $innerPadding: 10px 10px 0 10px;
 
 .tile_container {
   margin-bottom: 26px;
-  transition: max-height 0.3s ease-in-out; /* Animation transition */
   border-radius: 5px;
   border: 1px solid rgb(222, 226, 230);
 
@@ -15,6 +14,7 @@ $innerPadding: 10px 10px 0 10px;
   width: $imageSize;
   height: $imageSize;
   border-radius: 5px;
+
   &.isExpanded {
     box-shadow: none
   }
@@ -24,36 +24,28 @@ $innerPadding: 10px 10px 0 10px;
   }
 }
 
-
-
 .tile_description {
   text-align: left;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in;
 
   > h3 {
     padding: $innerPadding;
     font-weight: bolder;
     font-size: 20px
   }
+
   > p {
     padding: $innerPadding;
   }
 
-  >.tile_link {
+  > .tile_link {
     margin-left: 10px;
     margin-bottom: 10px;
   }
-
-
-  &.isExpanded {
-    max-height: 1000px;
-    opacity: 1;
-  }
 }
 
-.tile-image:hover {
-  opacity: 0.7;
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .tile-image:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
 }
