@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import LinkBtn from "../LinkBtn/LinkBtn";
 
 const Panel = (props) => {
-    const {imgSrc, title, description, link, isMobile} = props;
+    const {imgSrc, title, description, alt, link, isMobile} = props;
 
     const renderLink = () => {
         if (link) {
@@ -27,7 +27,7 @@ const Panel = (props) => {
         <Row>
             <Col lg={12} position="center">
                 <div className={panelClasses}>
-                    <PanelImage isMobile={isMobile} imgSrc={imgSrc}></PanelImage>
+                    <PanelImage isMobile={isMobile} imgSrc={imgSrc} alt={alt} />
                     <div className={descriptionClasses}>
                         <h1>{title}</h1>
                         <p>{description}</p>

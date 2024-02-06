@@ -19,7 +19,7 @@ function FreeTime(props) {
     const {isMobile} = props;
 
     const handleClick = (id) => {
-        if(id === expandedId){
+        if (id === expandedId) {
             setExpandedId(null);
         } else {
             setExpandedId(id);
@@ -27,7 +27,7 @@ function FreeTime(props) {
     };
     const renderTile = (index) => {
         if (Array.isArray(hobbiesData)) {
-            const {imgSrc, descriptionLabel, title, link} = hobbiesData[index];
+            const {imgSrc, descriptionLabel, title, link, alt} = hobbiesData[index];
             const id = `hobby-panel-${index}`
             const isExpanded = id === expandedId;
             return <Tile key={id}
@@ -38,7 +38,8 @@ function FreeTime(props) {
                          link={link}
                          onClick={handleClick}
                          isExpanded={isExpanded}
-                         isMobile={isMobile}/>
+                         isMobile={isMobile}
+                         alt={translator(alt, lang)}/>
         }
         console.warn('Hobbies are empty');
         return <div>No Data</div>;

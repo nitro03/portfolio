@@ -10,11 +10,12 @@ const getProjectsData = () => {
         imgSrc: comarchOssImg,
         title: 'comarch_oss_project_title',
         descriptionLabel: 'comarch_oss_project_label',
-        link: 'https://www.comarch.com/telecommunications/oss-solutions/'
+        link: 'https://www.comarch.com/telecommunications/oss-solutions/',
+        alt: 'alt__oss'
     });
-    projects.push({imgSrc: snowPlowImg, title: 'snow_plow_project_title', descriptionLabel: 'snow_plow_project_label'});
-    projects.push({imgSrc: roomPlanner, title: 'room_planner_project_title', descriptionLabel: 'room_planner_project_label'});
-    projects.push({imgSrc: androidTodoImg, title: 'android_todo_project_title', descriptionLabel: 'android_todo_project_label'});
+    projects.push({imgSrc: snowPlowImg, title: 'snow_plow_project_title', descriptionLabel: 'snow_plow_project_label', alt: 'alt__plowhelper'});
+    projects.push({imgSrc: roomPlanner, title: 'room_planner_project_title', descriptionLabel: 'room_planner_project_label', alt: 'alt__planner'});
+    projects.push({imgSrc: androidTodoImg, title: 'android_todo_project_title', descriptionLabel: 'android_todo_project_label', alt: 'alt__todoapp'});
 
     return projects;
 }
