@@ -56,5 +56,15 @@
   "now": "teraz",
   "email_placeholder": "imie@domena.pl",
   "name_placeholder": "Twoje imię",
-  "message_placeholder": "Wpisz wiadomość"
+  "message_placeholder": "Wpisz wiadomość",
+  "alt__my_photo": "Moje zdjęcie",
+  "alt__gaming": "Grafika gamingu - AI",
+  "alt__sport": "Grafika sportu - AI",
+  "alt__horus": "Horus - kot bengalski",
+  "alt__dyi": "Mebel balkonowy",
+  "alt__modelling": "F-14",
+  "alt__oss": "Grafika Comarch OSS",
+  "alt__planner": "Ekran z Room Plannera",
+  "alt__plowhelper": "Zdjęcie urządzenia montowanego w pługo-piaskarce",
+  "alt__todoapp": "Ekran z appki Voice Todo"
 }

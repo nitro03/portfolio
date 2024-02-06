@@ -20,11 +20,12 @@ function Projects(props) {
         const projects = getProjectsData();
 
         return projects.map((project, index) => {
-            const {imgSrc, title, descriptionLabel, link} = project;
+            const {imgSrc, title, descriptionLabel, link, alt} = project;
 
             return (<Panel key={`project-panel-${index}`}
                            title={translator(title, lang)}
                            imgSrc={imgSrc}
+                           alt={translator(alt, lang)}
                            link={link}
                            description={translator(descriptionLabel, lang)}
                            isMobile={isMobile} />);
