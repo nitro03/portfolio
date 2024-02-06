@@ -56,5 +56,15 @@
   "now": "now",
   "email_placeholder": "name@example.com",
   "name_placeholder": "Your name",
-  "message_placeholder": "Type your message"
+  "message_placeholder": "Type your message",
+  "alt__my_photo": "My photo",
+  "alt__gaming": "Gaming image - AI",
+  "alt__sport": "Sport image - AI",
+  "alt__horus": "Horus - Bengal Cat",
+  "alt__dyi": "Balcony furniture",
+  "alt__modelling": "F-14",
+  "alt__oss": "Comarch OSS graphic",
+  "alt__planner": "Room Plannera screen",
+  "alt__plowhelper": "Device mounted in snowplow",
+  "alt__todoapp": "Voice Todo app screen"
 }

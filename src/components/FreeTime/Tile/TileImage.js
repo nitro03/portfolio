@@ -6,8 +6,8 @@ import classNames from 'classnames';
 import './scss/tile.scss';
 
 const TileImage = (props) => {
-    const {imgSrc, isMobile, isExpanded} = props;
-    const img = <Image src={imgSrc}/>;
+    const {imgSrc, isMobile, isExpanded, alt} = props;
+    const img = <Image src={imgSrc} alt={alt}/>;
     const classes = classNames("tile-image", {
         'mobile': isMobile,
         'isExpanded': isExpanded
