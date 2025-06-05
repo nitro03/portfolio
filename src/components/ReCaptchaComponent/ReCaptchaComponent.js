@@ -2,8 +2,13 @@ import ReCAPTCHA from 'react-google-recaptcha'
 
 import './css/recaptcha_compoenent.scss';
 
-const SITE_KEY = '6LdRaVwpAAAAAIsKaYJZgRkAILbWY9yg0G1UMnmb';
 const ReCaptchaComponent = ({onChange, lang}) => {
+    let SITE_KEY = '';
+    if (process?.env?.API_KEY) {
+        console.warn("API Key is not set");
+        SITE_KEY = process.env.API_KEY;
+    }
+    
     const handleVerify = () => {
         onChange(true);
     };
