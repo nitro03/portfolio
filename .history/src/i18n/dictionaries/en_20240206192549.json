@@ -56,7 +56,5 @@
   "now": "now",
   "email_placeholder": "name@example.com",
   "name_placeholder": "Your name",
-  "message_placeholder": "Type your message",
-  "lead_engineer": "Lead Software Engineer",
-  "epam_desc": "Currently, I work at EPAM Systems as a Lead Software Engineer. I focus on building applications and delivering projects for the world's largest IT players. I am involved in a project in the Healthcare industry. The technologies we use include React, JS, TS, Java, Docker, and cloud solutions."
+  "message_placeholder": "Type your message"
 }
