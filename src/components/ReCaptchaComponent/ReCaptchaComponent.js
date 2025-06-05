@@ -3,7 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import './css/recaptcha_compoenent.scss';
 
 const ReCaptchaComponent = ({onChange, lang}) => {
-    cosnt SITE_KEY = '6LcohVYrAAAAAPZudXnSE_Ao4EKBnw5vSLeYkIqI';
+    const SITE_KEY = '6LcohVYrAAAAAPZudXnSE_Ao4EKBnw5vSLeYkIqI';
    
     const handleVerify = () => {
         onChange(true);
