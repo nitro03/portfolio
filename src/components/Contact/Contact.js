@@ -15,7 +15,7 @@ Contact.propTypes = {
     isMobile: PropTypes.bool
 };
 
-const SEND_MAIL_FEATURE_FLAG = false; // Feature flag to enable/disable the send mail functionality - true only in main branch
+const SEND_MAIL_FEATURE_FLAG = true; // Feature flag to enable/disable the send mail functionality - true only in main branch
 
 function Contact(props) {
     const MSG_FIELD_ROWS = 10;
