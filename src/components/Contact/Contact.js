@@ -15,6 +15,8 @@ Contact.propTypes = {
     isMobile: PropTypes.bool
 };
 
+const SEND_MAIL_FEATURE_FLAG = false; // Feature flag to enable/disable the send mail functionality - true only in main branch
+
 function Contact(props) {
     const MSG_FIELD_ROWS = 10;
     const INPUT_EMAIL_ID = 'formControlEmail';
@@ -31,7 +33,7 @@ function Contact(props) {
 
     const [formState, setFormState] = useState(INITIAL_STATE);
     const [validated, setValidated] = useState(false);
-    const [isCaptchaValid, setIsCaptchaValid] = useState(false);
+    const [isCaptchaValid, setIsCaptchaValid] = useState(!SEND_MAIL_FEATURE_FLAG);
     const [isModalShown, showModal] = useState(false);
     const [hasRequestPassed, setRequestPassed] = useState(false);
     const toggleModal = () => showModal(!isModalShown);
@@ -86,7 +88,12 @@ function Contact(props) {
             date: currentDate
         }
         //TODO: loader
-        sendMsg(message)
+        if(SEND_MAIL_FEATURE_FLAG){
+            sendMsg(message)
+        } else {
+            console.warn('Send mail feature is disabled');
+            openConfirmation();
+        }
     }
     const renderInfo = () => {
         return (
@@ -183,7 +190,7 @@ function Contact(props) {
                                   onChange={onInputChange}/>
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <ReCaptchaComponent onChange={handleCaptcha} lang={lang}/>
+                    (SEND_MAIL_FEATURE_FLAG ? <ReCaptchaComponent onChange={handleCaptcha} lang={lang}/> : null)
                 </Form.Group>
                 <Button className="btn-main" disabled={!isCaptchaValid} type="submit">
                     <EmailIcon/>
