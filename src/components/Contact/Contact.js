@@ -190,7 +190,7 @@ function Contact(props) {
                                   onChange={onInputChange}/>
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    (SEND_MAIL_FEATURE_FLAG ? <ReCaptchaComponent onChange={handleCaptcha} lang={lang}/> : null)
+                    {SEND_MAIL_FEATURE_FLAG ? <ReCaptchaComponent onChange={handleCaptcha} lang={lang}/> : null}
                 </Form.Group>
                 <Button className="btn-main" disabled={!isCaptchaValid} type="submit">
                     <EmailIcon/>
