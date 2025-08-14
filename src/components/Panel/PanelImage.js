@@ -4,8 +4,8 @@ import {Image} from 'react-bootstrap';
 import classNames from 'classnames';
 
 const PanelImage = (props) => {
-    const {imgSrc, isMobile} = props;
-    const img = <Image src={imgSrc}/>;
+    const {imgSrc, isMobile, alt} = props;
+    const img = <Image src={imgSrc} alt={alt}/>;
     const classes = classNames("panel-image", {
         'mobile': isMobile
     });

@@ -37,7 +37,7 @@ function Career(props) {
             <Row>
                 <Col xs={12} position={"center"}>
                     <CareerCard
-                        period={`2023-07 - 2025-04`}
+                        period={`2023-07 - 2025-04}`}
                         description={translator("team_leader_desc_new", lang)}
                         position={translator("team_leader", lang)}
                         employer="Comarch"

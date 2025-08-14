@@ -57,16 +57,6 @@
   "email_placeholder": "name@example.com",
   "name_placeholder": "Your name",
   "message_placeholder": "Type your message",
-  "alt__my_photo": "My photo",
-  "alt__gaming": "Gaming image - AI",
-  "alt__sport": "Sport image - AI",
-  "alt__horus": "Horus - Bengal Cat",
-  "alt__dyi": "Balcony furniture",
-  "alt__modelling": "F-14",
-  "alt__oss": "Comarch OSS graphic",
-  "alt__planner": "Room Plannera screen",
-  "alt__plowhelper": "Device mounted in snowplow",
-  "alt__todoapp": "Voice Todo app screen",
   "lead_engineer": "Lead Software Engineer",
   "epam_desc": "Currently, I work at EPAM Systems as a Lead Software Engineer. I focus on building applications and delivering projects for the world's largest IT players. I am involved in a project in the Healthcare industry. The technologies we use include React, JS, TS, Java, Docker, and cloud solutions."
 }

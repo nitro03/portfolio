@@ -1,11 +1,11 @@
 import React from 'react';
-import {AnimatePresence, motion} from 'framer-motion';
+import {motion} from 'framer-motion';
 import TileImage from "./TileImage";
 import classNames from "classnames";
 import LinkBtn from "../../LinkBtn/LinkBtn";
 
 const Tile = (props) => {
-    const {id, size, description, title, imgSrc, link, isMobile, onClick, isExpanded} = props;
+    const {id, size, description, title, imgSrc, link, isMobile, onClick, isExpanded, alt} = props;
 
     const tileContainerClasses = classNames("tile_container", {
         'mobile': isMobile,
@@ -17,7 +17,7 @@ const Tile = (props) => {
         'lg': size === 'lg'
     });
 
-    const handleClick = (e) => {
+    const handleClick = () => {
         if (typeof onClick === 'function') {
             onClick(id);
         }
@@ -50,7 +50,7 @@ const Tile = (props) => {
     return (
         <div className={tileContainerClasses} onClick={handleClick}>
             <div className={tilePhotoClasses}>
-                <TileImage isExpanded={isExpanded} imgSrc={imgSrc}/>
+                <TileImage isExpanded={isExpanded} imgSrc={imgSrc} alt={alt}/>
             </div>
             <motion.div layout={"size"}>
                 {renderDescription()}

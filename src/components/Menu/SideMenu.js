@@ -19,7 +19,7 @@ function SideMenu() {
     const renderAvatar = () => {
         return (<div className="avatar-container">
             <div className="avatar-shadow">
-                <Image className='avatar-pic' src={myPic} roundedCircle/>
+                <Image className='avatar-pic' src={myPic} alt={translator("alt__my_photo", lang)} roundedCircle/>
             </div>
         </div>);
     };
